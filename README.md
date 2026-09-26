@@ -5,11 +5,16 @@
 ## 安装
 
 ```bash
+# 推荐：完全限定名安装——Homebrew 仅信任该 formula（无需额外授权步骤）
+brew install admin001-bit/tap/standardcode
+
+# 或：先信任该 formula，再按短名安装
 brew tap admin001-bit/tap
+brew trust --formula admin001-bit/tap/standardcode
 brew install standardcode
 ```
 
-> Homebrew ≥6.0.0 对非官方 tap 默认不受信任：首次安装按 brew 的交互提示授权即可（官方说明：[Tap Trust](https://docs.brew.sh/Tap-Trust)）。
+> Homebrew ≥6.0.0 起，非官方 tap 默认不受信任：按**短名**安装前须先信任该 formula（或信任整个 tap）；**完全限定名**安装则自动仅信任该 formula。详见官方 [Tap Trust](https://docs.brew.sh/Tap-Trust)。
 
 ## 说明
 
